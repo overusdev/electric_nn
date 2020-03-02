@@ -1,0 +1,48 @@
+.b-nav  {
+    display: flex;
+    background-color: #fff;
+    @include transition();
+
+    @include tablet {
+        background: #00ffa4;
+    }
+    @include desktop {
+        // background: red;
+    }
+
+    &__logo-wrapper {
+        color: $color_invert;
+        font-weight: bold;
+    }
+
+    &__nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
+    &__links {
+
+        color: $color_gefault;
+        @include transition();
+
+        @include desktop {
+            margin-left: 24px;
+
+            &:hover {
+                text-decoration: none;
+                color: $color_invert;
+            }
+        }
+    }
+}
