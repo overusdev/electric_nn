@@ -1,6 +1,5 @@
 import jQuery from "jquery";
 
-
 jQuery(function () {
 
     const $popup          = $('.b-popup');
@@ -28,5 +27,67 @@ jQuery(function () {
         $popup.removeClass('b-popup_state_shown');
     });
 
+    //скролл side главная страница
+    $(window).scroll(function () {
+        var $sections = $('.el-sections');
+        $sections.each(function (i, el) {
+
+            var top = $(el).offset().top - 100;
+            var bottom = top + $(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr('id');
+            if (scroll > top && scroll < bottom) {
+                $('.b-nav__links').removeClass('b-nav__links_state_active');
+                $('a[href="#' + id + '"]').addClass('b-nav__links_state_active');
+
+            }
+        })
+    });
+
+    $('.b-nav__links').on("click", function (event) {
+        // исключаем стандартную реакцию браузера
+        event.preventDefault();
+
+        // получем идентификатор блока из атрибута href
+        const id = $(this).attr('href'),
+
+        // находим высоту, на которой расположен блок
+        top = $(id).offset().top;
+
+        // анимируем переход к блоку, время: 800 мс
+        $('body,html').animate({ scrollTop: top }, 800);
+    });
+
+    //фикс навбар
+    $(window).scroll(function () {
+
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 80) {
+            $('.b-nav').addClass("b-nav_state_fixed");
+        }
+        else {
+            $('.b-nav').removeClass("b-nav_state_fixed");
+        }
+    });
+
+    // показать кнопку наверх
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 350) {
+            $('#top').fadeIn(100);
+        }
+        else {
+            $('#top').fadeOut(100);
+        }
+    });
+
+    //Кнопка "Наверх"
+    //http://api.jquery.com/scrolltop/
+    //http://api.jquery.com/animate/
+    $("#top").click(function () {
+        $("body, html").animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
 
 });

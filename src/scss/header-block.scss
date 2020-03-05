@@ -11,8 +11,10 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+        padding-top: 80px;
         @include desktop {
             flex-direction: row;
+            padding-top: 0;
         }
     }
 

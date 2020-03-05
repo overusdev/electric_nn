@@ -1,7 +1,17 @@
 .b-nav  {
-    position: relative;
+    // position: relative
+    position: absolute;
     display: flex;
+    width: 100%;
+    z-index: 9;
     background-color: #fff;
+
+    &_state {
+        &_fixed {
+            position: fixed;
+        }
+    }
+
     @include transition();
 
     @include tablet {
