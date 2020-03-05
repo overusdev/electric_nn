@@ -6,14 +6,15 @@ var data = {
 
 %>
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="css/style.bundle.css" />
-    <title>Частный электрик | главная</title>
-  </head>
+  <html lang="ru">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <link rel="stylesheet" href="css/style.bundle.css" />
+      <title>Частный электрик | главная</title>
+    </head>
   <body>
+    <div class="b-popup b-close-popup-elem"></div>
 <%= _.template(require('./../includes/nav.html').default)(data) %>
 <%= _.template(require('./../includes/header-block.html').default)(data) %>
 <%= _.template(require('./../includes/scripts.html').default)(data) %>

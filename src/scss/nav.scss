@@ -36,6 +36,12 @@
         color: $color_gefault;
         @include transition();
 
+        &_state {
+            &_active {
+                color: $color_invert;
+            }
+        }
+
         @include desktop {
             margin-left: 24px;
 

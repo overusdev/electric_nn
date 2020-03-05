@@ -54,4 +54,25 @@
             outline: none;
         }
     }
+
+    &__right {
+        position: relative;
+
+        @include desktop {
+            height: 674px;
+            width: 50%;
+        }
+
+    }
+
+    &__bg-image {
+
+        @include desktop {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+        }
+
+    }
 }
