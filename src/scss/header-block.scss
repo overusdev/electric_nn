@@ -1,14 +1,19 @@
 .b-header-block {
+    padding: 36px 0;
     background-color: rgba(26,40,63,.03);
     @include transition();
 
-    @include tablet {
-
+    @include desktop {
+        padding: 0;
     }
 
 
     &__wrapper {
         display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+        }
     }
 
     &__left {
@@ -57,8 +62,9 @@
 
     &__right {
         position: relative;
-
+        display: none;
         @include desktop {
+            display: block;
             height: 674px;
             width: 50%;
         }
@@ -66,9 +72,8 @@
     }
 
     &__bg-image {
-
+        width: 100%;
         @include desktop {
-            width: 100%;
             position: absolute;
             bottom: 0px;
             right: 0;

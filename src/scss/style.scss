@@ -4,24 +4,7 @@
 @import 'base/reset';
 @import 'nav';
 @import 'header-block';
-
-.b-popup {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #00000057;
-    z-index: 999;
-    @include transition();
-
-    &_state {
-        &_shown {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-}
+@import 'popup';
 
 
 // body {

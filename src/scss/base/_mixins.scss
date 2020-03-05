@@ -66,10 +66,13 @@
 // typograthy
 
 @mixin t-big {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 600;
     font-style: normal;
     line-height: 1.35em;
+    @include desktop {
+        font-size: 48px;
+    }
 }
 
 @mixin t-content {

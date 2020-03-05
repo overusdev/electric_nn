@@ -14,7 +14,7 @@ var data = {
       <title>Частный электрик | главная</title>
     </head>
   <body>
-    <div class="b-popup b-close-popup-elem"></div>
+<%= _.template(require('./../includes/popup.html').default)(data) %>
 <%= _.template(require('./../includes/nav.html').default)(data) %>
 <%= _.template(require('./../includes/header-block.html').default)(data) %>
 <%= _.template(require('./../includes/scripts.html').default)(data) %>
