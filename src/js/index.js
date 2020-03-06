@@ -7,6 +7,7 @@ jQuery(function () {
     const $closePopupElem = $('.b-close-popup-elem');
     const $burger         = $('.b-nav__burger');
     const $menuArrow      = $('.b-nav__menu-arrow');
+    const $servicesItem   = $('.b-services__item');
 
     $burger.on('click', function () {
         $('.b-nav__menu-wrapper').addClass('b-nav__menu-wrapper_state_active');
@@ -26,6 +27,11 @@ jQuery(function () {
     $closePopupElem.on('click', function () {
         $popup.removeClass('b-popup_state_shown');
     });
+
+
+    // $servicesItem.on('click', function () {
+    //     $(this).toggleClass('b-services__item_state_scaled');
+    // });
 
     //скролл side главная страница
     $(window).scroll(function () {

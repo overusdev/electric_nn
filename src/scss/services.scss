@@ -2,6 +2,25 @@
     padding: 100px 0 36px 0;
     // height: 550px;
     background: #fff;
+
+    &__rel {
+        position: relative;
+    }
+
+    &__full-block {
+        display: none;
+        position: absolute;
+
+        &_state {
+            &_show {
+                display: block;
+                width: 100%;
+                background: #ccc;
+                padding: 36px;
+            }
+        }
+    }
+
     &__header {
         @include t-content-title;
         color: $color_invert;
@@ -18,14 +37,27 @@
         overflow: hidden;
         border: 1px solid #e2e2e2;
         cursor: pointer;
+        @include transition();
 
         &:hover .b-services__subitem {
             bottom: 0;
+        }
+
+        &_state {
+            &_scaled {
+                -webkit-transform: scale3d(0,0,1);
+                -ms-transform: scale3d(0,0,1);
+                transform: scale3d(1.5,1.5,1.5);
+                -webkit-animation-delay: .5s;
+                animation-delay: .5s;
+                z-index: 9;
+            }
         }
     }
 
     &__item-title-wrapper {
         display: flex;
+        margin-top: 16px;
     }
 
     &__item-title {
@@ -99,9 +131,16 @@
         right: 0;
         bottom: -265px;
         @include transition();
+
+        &:hover .b-services__loupe-wrapper{
+            opacity: 1;
+            visibility: visible;
+            right: 15px;
+        }
     }
 
     &__subitem-price-header {
+        position: relative;
         display: flex;
         align-items: center;
         height: 85px;
@@ -130,22 +169,60 @@
     }
 
     &__subitem-content {
+        overflow-y: auto;
+        height: 265px;
         padding: 0 24px;
         background: rgba(255, 255, 255, 0.8784313725490196);
-        height: inherit;
+        // height: inherit;
+
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+            background-color: rgba(0,0,0,0.2);
+            box-shadow: 0 0 1px rgba(255,255,255,0.5);
+        }
     }
 
     &__subitem-content-item {
         position: relative;
-        height: 40px;
         display: flex;
         align-items: center;
+        min-height: 60px;
         border-bottom: 1px solid #e6e6e6;
+    }
+
+    &__subitem-content-title {
+        width: 70%;
+        line-height: 1.4;
     }
 
     &__subitem-content-new-price {
         position: absolute;
         right: 15px;
+    }
+
+    &__loupe-wrapper {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        width: 135px;
+        @include transition();
+    }
+    &__loupe {
+        position: absolute;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: url(../img/services/b-services__icon-loupe.svg) no-repeat;
+        background-size: cover;
     }
 
 }
