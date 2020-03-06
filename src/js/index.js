@@ -48,27 +48,29 @@ jQuery(function () {
         // исключаем стандартную реакцию браузера
         event.preventDefault();
 
+        $('.b-nav__menu-wrapper').removeClass('b-nav__menu-wrapper_state_active');
+
         // получем идентификатор блока из атрибута href
-        const id = $(this).attr('href'),
+        var id = $(this).attr('href'),
 
         // находим высоту, на которой расположен блок
-        top = $(id).offset().top;
+            top = $(id).offset().top;
+
+        console.log(top);
 
         // анимируем переход к блоку, время: 800 мс
         $('body,html').animate({ scrollTop: top }, 800);
     });
 
     //фикс навбар
-    $(window).scroll(function () {
-
-        console.log($(this).scrollTop());
-        if ($(this).scrollTop() > 80) {
-            $('.b-nav').addClass("b-nav_state_fixed");
-        }
-        else {
-            $('.b-nav').removeClass("b-nav_state_fixed");
-        }
-    });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 80) {
+                $('.b-nav').addClass("b-nav_state_fixed");
+            }
+            else {
+                $('.b-nav').removeClass("b-nav_state_fixed");
+            }
+        });
 
     // показать кнопку наверх
     $(window).scroll(function () {

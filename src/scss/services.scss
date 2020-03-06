@@ -1,4 +1,16 @@
 .b-services {
-    height: 550px;
-    background: #ccc;
+    padding: 100px 0 36px 0;
+    // height: 550px;
+    background: #fff;
+    &__header {
+        @include t-content-title;
+        color: $color_invert;
+        margin-bottom: 48px;
+    }
+
+    &__item {
+        background-color: #f6f6f7;
+        min-height: 350px;
+        margin-bottom: 30px;
+    }
 }

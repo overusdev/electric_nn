@@ -75,6 +75,13 @@
     }
 }
 
+@mixin t-content-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.88em;
+}
+
 @mixin t-content {
     font-size: 17px;
     font-weight: 400;

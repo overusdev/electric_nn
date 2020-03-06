@@ -9,7 +9,11 @@
 @import 'popup';
 
 .el-sections {
-    height: 100vh;
+    height: auto;
+    @include desktop {
+        // min-height: 100vh;
+    }
+
 }
 // body {
 //   font-family: $font-stack;

@@ -8,7 +8,9 @@
 
     &_state {
         &_fixed {
-            position: fixed;
+            // position: fixed;
+            position: sticky;
+            top: 1px;
         }
     }
 
