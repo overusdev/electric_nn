@@ -12,5 +12,70 @@
         background-color: #f6f6f7;
         min-height: 350px;
         margin-bottom: 30px;
+        padding: 24px;
+        border-radius: 6px;
+    }
+
+    &__item-title {
+        line-height: 1.4;
+        @include t-content-title;
+    }
+
+    &__item-icon-wrapper {
+        padding: 10px;
+        background: #fff;
+        border-radius: 6px;
+        display: inline-block;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        &_passatiges {
+            width: 48px;
+            height: 48px;
+            display: block;
+            background: url(../img/services/b-services__icon_passatiges.svg) no-repeat;
+        }
+
+        &_chaladiler {
+            width: 48px;
+            height: 48px;
+            display: block;
+            background: url(../img/services/b-services__icon_chaladiler.svg) no-repeat;
+            background-size: cover;
+        }
+
+        &_socket {
+            width: 48px;
+            height: 48px;
+            display: block;
+            background: url(../img/services/b-services__icon_socket.svg) no-repeat;
+            background-size: cover;
+        }
+
+        &_wiring {
+            width: 48px;
+            height: 48px;
+            display: block;
+            background: url(../img/services/b-services__icon_wiring.svg) no-repeat;
+            background-size: cover;
+        }
+
+        &_meter {
+            width: 48px;
+            height: 48px;
+            display: block;
+            background: url(../img/services/b-services__icon_meter.svg) no-repeat;
+            background-size: cover;
+        }
+
+        &_electro-works {
+            width: 48px;
+            height: 48px;
+            display: block;
+            background: url(../img/services/b-services__icon_electro-works.svg) no-repeat;
+            background-size: cover;
+        }
     }
 }

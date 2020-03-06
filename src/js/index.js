@@ -63,14 +63,14 @@ jQuery(function () {
     });
 
     //фикс навбар
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 80) {
-                $('.b-nav').addClass("b-nav_state_fixed");
-            }
-            else {
-                $('.b-nav').removeClass("b-nav_state_fixed");
-            }
-        });
+        // $(window).scroll(function () {
+        //     if ($(this).scrollTop() > 80) {
+        //         $('.b-nav').addClass("b-nav_state_fixed");
+        //     }
+        //     else {
+        //         $('.b-nav').removeClass("b-nav_state_fixed");
+        //     }
+        // });
 
     // показать кнопку наверх
     $(window).scroll(function () {
