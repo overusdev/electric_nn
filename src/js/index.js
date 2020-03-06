@@ -29,9 +29,10 @@ jQuery(function () {
     });
 
 
-    // $servicesItem.on('click', function () {
-    //     $(this).toggleClass('b-services__item_state_scaled');
-    // });
+    $servicesItem.on('click', function () {
+        console.log($(this).data('item'));
+        $('div[data-full="' + $(this).data('item') + '"]').addClass('b-services__full-block_state_show');
+    });
 
     //скролл side главная страница
     $(window).scroll(function () {

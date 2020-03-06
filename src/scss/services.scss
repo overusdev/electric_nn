@@ -10,13 +10,14 @@
     &__full-block {
         display: none;
         position: absolute;
+        width: 100%;
+        top: 0;
+        padding: 36px;
+        background: red;
 
         &_state {
             &_show {
                 display: block;
-                width: 100%;
-                background: #ccc;
-                padding: 36px;
             }
         }
     }
