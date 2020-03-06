@@ -13,13 +13,22 @@
         width: 100%;
         top: 0;
         padding: 36px;
-        background: red;
+        background: #fff;
+        border: 1px solid #e2e2e2;
+        box-shadow: 0px 1px 26px 0px rgba(50, 50, 50, 0.18);
 
         &_state {
             &_show {
                 display: block;
             }
         }
+    }
+
+    &__full-block-close {
+        position: absolute;
+        right: 75px;
+        cursor: pointer;
+        color: $color_gefault;
     }
 
     &__header {
@@ -185,6 +194,11 @@
             border-radius: 2px;
             background-color: rgba(0,0,0,0.2);
             box-shadow: 0 0 1px rgba(255,255,255,0.5);
+        }
+
+        &_full {
+            margin-top: 34px;
+            min-height: 450px;
         }
     }
 

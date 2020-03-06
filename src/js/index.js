@@ -8,6 +8,7 @@ jQuery(function () {
     const $burger         = $('.b-nav__burger');
     const $menuArrow      = $('.b-nav__menu-arrow');
     const $servicesItem   = $('.b-services__item');
+    const $closeFullBlock = $('.b-services__full-block-close');
 
     $burger.on('click', function () {
         $('.b-nav__menu-wrapper').addClass('b-nav__menu-wrapper_state_active');
@@ -30,8 +31,16 @@ jQuery(function () {
 
 
     $servicesItem.on('click', function () {
-        console.log($(this).data('item'));
         $('div[data-full="' + $(this).data('item') + '"]').addClass('b-services__full-block_state_show');
+    });
+
+
+    $closeFullBlock.on('click', function () {
+        $('div[data-full="' + $(this).data('item') + '"]').addClass('b-services__full-block_state_show');
+    });
+
+    $closeFullBlock.on('click', function () {
+        $(this).parent('.b-services__full-block').removeClass('b-services__full-block_state_show');
     });
 
     //скролл side главная страница
