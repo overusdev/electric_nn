@@ -221,14 +221,17 @@
     }
 
     &__loupe-wrapper {
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        width: 135px;
-        @include transition();
+        display: none;
+        @include desktop {
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            width: 135px;
+            @include transition();
+        }
     }
     &__loupe {
         position: absolute;

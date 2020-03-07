@@ -7,7 +7,7 @@ jQuery(function () {
     const $closePopupElem = $('.b-close-popup-elem');
     const $burger         = $('.b-nav__burger');
     const $menuArrow      = $('.b-nav__menu-arrow');
-    const $servicesItem   = $('.b-services__item');
+    const $loupeWrapper   = $('.b-services__loupe-wrapper');
     const $closeFullBlock = $('.b-services__full-block-close');
 
     $burger.on('click', function () {
@@ -30,7 +30,7 @@ jQuery(function () {
     });
 
 
-    $servicesItem.on('click', function () {
+    $loupeWrapper.on('click', function () {
         $('div[data-full="' + $(this).data('item') + '"]').addClass('b-services__full-block_state_show');
     });
 
