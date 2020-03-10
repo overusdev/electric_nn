@@ -250,4 +250,60 @@
         background-size: cover;
     }
 
+    &__any-questions {
+        margin-top: 0;
+        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+        padding: 116px 0 126px;
+        background: $color_invert;
+        @include desktop {
+            margin-top: 96px;
+        }
+    }
+
+    &__any-questions-inner-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__any-title {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1.35em;
+        margin-bottom: 20px;
+        @include desktop {
+            ont-size: 48px;
+        }
+    }
+
+    &__any-text {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1.22em;
+    }
+
+    &__any-button {
+        @include t-content;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        color: $color_invert;
+        border-radius: 6px;
+        padding: 15px 49px 17px;
+        margin-top: 24px;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+
 }
