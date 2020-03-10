@@ -40,9 +40,10 @@
     &__item {
         position: relative;
         background-color: #f6f6f7;
-        min-height: 350px;
+        // min-height: 350px;
+        height: 400px;
         margin-bottom: 30px;
-        padding: 24px;
+        // padding: 24px;
         border-radius: 6px;
         overflow: hidden;
         border: 1px solid #e2e2e2;
@@ -68,6 +69,8 @@
     &__item-title-wrapper {
         display: flex;
         margin-top: 16px;
+        margin-bottom: 16px;
+        padding: 0 24px;
     }
 
     &__item-title {
@@ -134,12 +137,16 @@
         }
     }
 
+    &__img {
+        width: 100%;
+    }
+
     &__subitem {
         position: absolute;
-        height: 350px;
+        height: 400px;
         left: 0;
         right: 0;
-        bottom: -265px;
+        bottom: -315px;
         @include transition();
 
         &:hover .b-services__loupe-wrapper{
@@ -180,9 +187,9 @@
 
     &__subitem-content {
         overflow-y: auto;
-        height: 265px;
+        min-height: 315px;
         padding: 0 24px;
-        background: rgba(255, 255, 255, 0.8784313725490196);
+        background: #fff;
         // height: inherit;
 
         &::-webkit-scrollbar {
