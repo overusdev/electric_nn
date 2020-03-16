@@ -18,8 +18,45 @@
     }
 
     &__form-wrapper {
+        position: relative;
         padding: 10px;
         background: #fff;
+    }
+
+    &__close-popup {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: -36px;
+        right: 12px;
+        width: 30px;
+        height: 30px;
+        @include transition();
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(-180deg);
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+
+            width: 30px;
+            height: 4px;
+            background: #fff;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+
+            width: 30px;
+            height: 4px;
+            background: #fff;
+            transform: rotate(-45deg);
+        }
     }
 
     &__form {

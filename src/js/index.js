@@ -32,9 +32,9 @@ jQuery(function () {
     });
 
 
-    // $closePopupElem.on('click', function () {
-    //     $popup.removeClass('b-popup_state_shown');
-    // });
+    $('.b-popup__close-popup').on('click', function () {
+        $popup.removeClass('b-popup_state_shown');
+    });
 
 
     $loupeWrapper.on('click', function () {
