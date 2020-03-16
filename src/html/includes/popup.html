@@ -3,14 +3,19 @@
         <div class="b-popup__form-wrapper">
             <div class="b-popup__title">Оставьте свой номер телефона, и мы с вами свяжемся</div>
             <form action="" class="b-popup__form">
-                <label>
-                    Имя
-                    <input type="text" name="name">
-                </label>
-                <label>
-                    Телефон
-                    <input type="text" name="phone">
-                </label>
+                <div class="b-popup__input-wrapper">
+                    <label for="name" class="b-popup__label">
+                        Имя
+                    </label>
+                    <input id="name" class="b-popup__input" type="text" name="name">
+                </div>
+                <div class="b-popup__input-wrapper">
+                    <label for="phone" class="b-popup__label">
+                        Телефон
+                    </label>
+                    <input id="phone" class="b-popup__input" type="text" name="phone">
+                </div>
+                <button class="b-popup__button">Оставить заявку</button>
             </form>
         </div>
     </div>

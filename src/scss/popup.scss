@@ -26,5 +26,41 @@
         display: flex;
         flex-direction: column;
     }
+
+    &__title {
+        @include t-content-title;
+        margin-bottom: 18px;
+    }
+
+    &__input-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        margin-bottom: 8px;
+    }
+
+    &__label {
+        @include t-content;
+    }
+
+    &__input {
+        padding: 8px;
+    }
+
+    &__button {
+        @include t-content;
+        background-color: $color_invert;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 6px;
+        padding: 15px 49px 17px;
+        margin-top: 24px;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
 }
 

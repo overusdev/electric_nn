@@ -25,9 +25,16 @@ jQuery(function () {
     });
 
 
-    $closePopupElem.on('click', function () {
-        $popup.removeClass('b-popup_state_shown');
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (e.target.className === 'b-popup b-close-popup-elem b-popup_state_shown') {
+            $popup.removeClass('b-popup_state_shown');
+        }
     });
+
+
+    // $closePopupElem.on('click', function () {
+    //     $popup.removeClass('b-popup_state_shown');
+    // });
 
 
     $loupeWrapper.on('click', function () {
