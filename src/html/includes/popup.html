@@ -4,22 +4,31 @@
             <div class="b-popup__header-wrapper">
                 <div class="b-popup__title">Оставьте свой номер телефона, и мы с вами свяжемся  в ближайшее время</div>
             </div>
-            <form action="" class="b-popup__form">
+            <form action="" class="b-popup__form" method="POST">
                 <div class="b-popup__close-popup"></div>
                 <div class="b-popup__input-wrapper">
                     <label for="name" class="b-popup__label">
                         Имя
                     </label>
-                    <input id="name" class="b-popup__input" type="text" name="name">
+                    <input id="name" class="b-popup__input b-popup__input_name" type="text" name="name">
                 </div>
                 <div class="b-popup__input-wrapper">
                     <label for="phone" class="b-popup__label">
                         Телефон
                     </label>
-                    <input id="phone" class="b-popup__input" type="text" name="phone">
+                    <input
+                        id="phone"
+                        class="b-popup__input b-popup__input_phone"
+                        type="text"
+                        name="phone"
+                        placeholder="Например 8 999 888 77 66">
                 </div>
-                <button class="b-popup__button">Оставить заявку</button>
+                <button class="b-popup__button b-popup__button_state_disabled">Оставить заявку</button>
             </form>
+            <div class="b-popup__loader-wrapper">
+                <div class="b-popup__spinner spinner-13"></div>
+                <p class="b-popup__thnx-text">Спасибо за обращение, я свяжусь с вами в ближайшее время.</p>
+            </div>
         </div>
     </div>
 </div>

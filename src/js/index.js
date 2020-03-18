@@ -1,14 +1,71 @@
 import jQuery from "jquery";
+import mask from "jquery-mask-plugin";
 
 jQuery(function () {
 
-    const $popup          = $('.b-popup');
-    const $openPopupBtn   = $('.b-open-popup-btn');
-    const $closePopupElem = $('.b-close-popup-elem');
-    const $burger         = $('.b-nav__burger');
-    const $menuArrow      = $('.b-nav__menu-arrow');
-    const $loupeWrapper   = $('.b-services__loupe-wrapper');
-    const $closeFullBlock = $('.b-services__full-block-close');
+    const $popup              = $('.b-popup');
+    const $popupBtn           = $('.b-popup__button');
+    const $popupLoaderWrapper = $('.b-popup__loader-wrapper').hide();
+    const $popupSpinner       = $('.b-popup__spinner');
+    const $popupThnxText      = $('.b-popup__thnx-text').hide();
+    const $openPopupBtn       = $('.b-open-popup-btn');
+    const $closePopupElem     = $('.b-close-popup-elem');
+    const $burger             = $('.b-nav__burger');
+    const $menuArrow          = $('.b-nav__menu-arrow');
+    const $loupeWrapper       = $('.b-services__loupe-wrapper');
+    const $closeFullBlock     = $('.b-services__full-block-close');
+    const $inputPhone         = $('.b-popup__input_phone');
+
+    $inputPhone.mask('+0 (000) 000 00 00', { placeholder: "+_ (___) ___ __ __" });
+    $inputPhone.on('keyup', function() {
+        if ( $(this).val().length === 18 ) {
+            $popupBtn.removeClass('b-popup__button_state_disabled');
+        }
+    });
+
+    $popupBtn.on('click', function(e) {
+        e.preventDefault();
+        $popupLoaderWrapper.show();
+
+        // setTimeout(function () {
+        //     $popupSpinner.addClass('b-popup__spinner_state_hidden');
+        //     $popupThnxText.show();
+        // }, 2000);
+
+        setTimeout(function () {
+            $popup.removeClass('b-popup_state_shown');
+        }, 7000);
+
+        $.ajax({
+            url: "../../ajax/upload.php",
+            type: "POST",
+            data: $('.b-popup__form').serialize(),
+            dataType: "html",
+            beforeSend: function () {
+                $popupLoaderWrapper.show();
+            },
+            success: function (data) {
+                $popupSpinner.addClass('b-popup__spinner_state_hidden');
+                $popupThnxText.show();
+                setTimeout(function () {
+                    $popup.removeClass('b-popup_state_shown');
+                }, 7000);
+                // if (append) {
+                //     $(placeholder).append(data);
+                // } else {
+                //     $(placeholder).html(data);
+                // }
+            },
+            error: function () {
+                $popupSpinner.addClass('b-popup__spinner_state_hidden');
+                alert("Error occured.please try again");
+            },
+            complete: function () {
+                console.log('Complete')
+            },
+        });
+
+    })
 
     $burger.on('click', function () {
         $('.b-nav__menu-wrapper').addClass('b-nav__menu-wrapper_state_active');
