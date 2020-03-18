@@ -37,7 +37,7 @@ jQuery(function () {
         }, 7000);
 
         $.ajax({
-            url: "../../ajax/upload.php",
+            url: "../../ajax/order.php",
             type: "POST",
             data: $('.b-popup__form').serialize(),
             dataType: "html",
