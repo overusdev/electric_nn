@@ -143,29 +143,29 @@ jQuery(function () {
     });
 
     //фикс навбар
-        // $(window).scroll(function () {
-        //     if ($(this).scrollTop() > 80) {
-        //         $('.b-nav').addClass("b-nav_state_fixed");
-        //     }
-        //     else {
-        //         $('.b-nav').removeClass("b-nav_state_fixed");
-        //     }
-        // });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 80) {
+            $('.b-nav').addClass("b-nav_state_fixed");
+        }
+        else {
+            $('.b-nav').removeClass("b-nav_state_fixed");
+        }
+    });
 
     // показать кнопку наверх
     $(window).scroll(function () {
         if ($(this).scrollTop() > 350) {
-            $('#top').fadeIn(100);
+            $('.top').addClass('top_active');
         }
         else {
-            $('#top').fadeOut(100);
+            $('.top').removeClass('top_active');
         }
     });
 
     //Кнопка "Наверх"
     //http://api.jquery.com/scrolltop/
     //http://api.jquery.com/animate/
-    $("#top").click(function () {
+    $(".top").click(function () {
         $("body, html").animate({
             scrollTop: 0
         }, 800);

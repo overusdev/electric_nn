@@ -1,16 +1,17 @@
 .b-nav  {
     // position: relative
-    position: sticky;
+    // position: sticky;
+    position: fixed;
     display: flex;
-    // width: 100%;
+    width: 100%;
     z-index: 9;
     background-color: #fff;
 
     &_state {
         &_fixed {
-            // position: fixed;
-            position: sticky;
-            top: 1px;
+            -webkit-box-shadow: 0px 5px 11px 0px rgba(191, 191, 191, 0.3);
+            -moz-box-shadow:    0px 5px 11px 0px rgba(191, 191, 191, 0.3);
+            box-shadow:         0px 5px 11px 0px rgba(191, 191, 191, 0.3)
         }
     }
 
@@ -85,7 +86,7 @@
             &_active {
                 opacity: 1;
                 visibility: visible;
-                transform: translateX(-15px);
+                transform: translateX(0);
             }
         }
 
