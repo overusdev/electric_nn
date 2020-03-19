@@ -25,6 +25,7 @@
     }
 
     &__logo-wrapper {
+        display: none;
         color: $color_invert;
         font-weight: bold;
     }
@@ -32,8 +33,18 @@
     &__nav-wrapper {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 80px;
+        @include transition();
+
+        &_state {
+            &_tiny {
+                height: 60px;
+            }
+        }
+        @include desktop {
+            justify-content: flex-end;
+        }
     }
 
     &__burger {

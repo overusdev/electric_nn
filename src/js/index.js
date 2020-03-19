@@ -146,9 +146,11 @@ jQuery(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 80) {
             $('.b-nav').addClass("b-nav_state_fixed");
+            $('.b-nav__nav-wrapper').addClass("b-nav__nav-wrapper_state_tiny");
         }
         else {
             $('.b-nav').removeClass("b-nav_state_fixed");
+            $('.b-nav__nav-wrapper').removeClass("b-nav__nav-wrapper_state_tiny");
         }
     });
 

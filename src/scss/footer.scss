@@ -1,0 +1,45 @@
+.b-footer {
+    background: #000;
+    padding: 100px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop {
+            align-items: flex-start;
+        }
+    }
+
+    &__item {
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: #ccc;
+
+    }
+
+    &__icon {
+
+        position: relative;
+        padding-left: 43px;
+
+
+        &_vk {
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: 0;
+                width: 26px;
+                height: 26px;
+                display: block;
+                background: url(../img/footer/b-footer__icon_vk.svg) no-repeat;
+                background-size: cover;
+            }
+
+        }
+    }
+}
