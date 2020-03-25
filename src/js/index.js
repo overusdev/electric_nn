@@ -27,41 +27,33 @@ jQuery(function () {
         e.preventDefault();
         $popupLoaderWrapper.show();
 
-        // setTimeout(function () {
-        //     $popupSpinner.addClass('b-popup__spinner_state_hidden');
-        //     $popupThnxText.show();
-        // }, 2000);
-
         setTimeout(function () {
             $popup.removeClass('b-popup_state_shown');
         }, 7000);
 
         $.ajax({
-            url: "../../ajax/order.php",
+            url: "../ajax/order.php",
             type: "POST",
-            data: $('.b-popup__form').serialize(),
+            data: $('#b-popup__form').serialize(),
             dataType: "html",
             beforeSend: function () {
                 $popupLoaderWrapper.show();
+                console.log('Sending data...');
             },
             success: function (data) {
+                console.log(data);
                 $popupSpinner.addClass('b-popup__spinner_state_hidden');
                 $popupThnxText.show();
                 setTimeout(function () {
                     $popup.removeClass('b-popup_state_shown');
                 }, 7000);
-                // if (append) {
-                //     $(placeholder).append(data);
-                // } else {
-                //     $(placeholder).html(data);
-                // }
             },
             error: function () {
                 $popupSpinner.addClass('b-popup__spinner_state_hidden');
                 alert("Error occured.please try again");
             },
             complete: function () {
-                console.log('Complete')
+                console.log('Complete');
             },
         });
 
