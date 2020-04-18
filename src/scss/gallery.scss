@@ -1,0 +1,23 @@
+.b-gallery {
+    padding: 80px 0;
+    background-color: rgba(26,40,63,.03);
+    @include transition();
+
+    @include desktop {
+        padding: 80px 0;
+    }
+
+    &__header {
+        @include t-content-title;
+        color: $color_invert;
+        margin-bottom: 48px;
+    }
+
+    &__item {
+        margin-bottom: 24px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
