@@ -237,13 +237,19 @@
     }
 
     &__subitem-content-title {
-        width: 70%;
+        width: 60%;
         line-height: 1.4;
+        font-size: 14px;
     }
 
     &__subitem-content-new-price {
         position: absolute;
-        right: 15px;
+        // right: 0;
+        font-size: 14px;
+        @include desktop {
+            right: 15px;
+            font-size: 100%;
+        }
     }
 
     &__loupe-wrapper {
