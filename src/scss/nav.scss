@@ -17,9 +17,7 @@
 
     @include transition();
 
-    @include tablet {
-        background: #00ffa4;
-    }
+    @include tablet {}
     @include desktop {
         // background: red;
     }
