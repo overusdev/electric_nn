@@ -57,6 +57,10 @@
             display: block;
             background: url(../img/header/header__gift.svg) no-repeat;
             background-size: cover;
+
+            @include xs {
+                left: 150px;
+            }
             @include tablet {
                 left: unset;
                 right: -48px;
