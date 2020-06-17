@@ -38,8 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/btcdevel/static-site-webpack-habr"
+    "url": "git+https://github.com/btcdevel/static-site-webpack-habr.git"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "overus.dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/btcdevel/static-site-webpack-habr/issues"
+  },
+  "homepage": "https://github.com/btcdevel/static-site-webpack-habr#readme"
 }

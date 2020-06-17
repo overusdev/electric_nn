@@ -42,9 +42,40 @@
     }
 
     &__left-phone-note {
+        position: relative;
         @include t-content;
         color: $color_gefault;
         // margin-bottom: 24px;
+
+        &--gift::before {
+            content: '';
+            position: absolute;
+            left: 75px;
+            top: 32px;
+            width: 30px;
+            height: 30px;
+            display: block;
+            background: url(../img/header/header__gift.svg) no-repeat;
+            background-size: cover;
+
+            @include xs {
+                left: 150px;
+            }
+            @include tablet {
+                left: unset;
+                right: -48px;
+                top: -2px;
+                width: 35px;
+                height: 35px;
+            }
+            @include desktop {
+                left: unset;
+                right: -63px;
+                top: -9px;
+                width: 48px;
+                height: 48px;
+            }
+        }
     }
 
     &__button {
