@@ -5,10 +5,6 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        @include desktop {
-            align-items: flex-start;
-        }
     }
 
     &__item {
@@ -37,6 +33,36 @@
                 height: 26px;
                 display: block;
                 background: url(../img/footer/b-footer__icon_vk.svg) no-repeat;
+                background-size: cover;
+            }
+
+        }
+        &_inst {
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -4px;
+                width: 35px;
+                height: 35px;
+                display: block;
+                background: url(../img/footer/b-footer__icon_inst.svg) no-repeat;
+                background-size: cover;
+            }
+
+        }
+        &_youtube {
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: -4px;
+                width: 35px;
+                height: 35px;
+                display: block;
+                background: url(../img/footer/b-footer__icon_youtube.svg) no-repeat;
                 background-size: cover;
             }
 
