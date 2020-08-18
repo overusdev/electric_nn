@@ -1,7 +1,33 @@
-import jQuery from "jquery";
+import $ from "jquery";
 import mask from "jquery-mask-plugin";
+import 'owl.carousel';
 
-jQuery(function () {
+$(function () {
+
+    $('.owl-carousel').owlCarousel({
+        nav: true,
+        margin: 40,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            // 600:{
+            //     items:3,
+            //     nav:false
+            // },
+            1000:{
+                items:3,
+                nav:true,
+                loop:false
+            }
+        },
+        navText: [
+            "<img class='b-gallery__icon_arrow-left' src='img/gallery/arrows/b-gallery__icon_arrow-left.svg'>", 
+            "<img class='b-gallery__icon_arrow-right' src='img/gallery/arrows/b-gallery__icon_arrow-right.svg'>"
+        ],
+    })
 
     const $popup              = $('.b-popup');
     const $popupBtn           = $('.b-popup__button');

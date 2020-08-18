@@ -7,17 +7,58 @@
         padding: 80px 0;
     }
 
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__header {
-        @include t-content-title;
-        color: $color_invert;
+        position: relative;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 55px;
+        color: $black;
         margin-bottom: 48px;
+        display: inline-block;
+        @include desktop {
+            font-size: 48px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                left: -75px;
+                top: 5px;
+                background: url(../img/gallery/b-gallery__header-bubble-left.svg) no-repeat;
+                background-size: cover;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                right: -75px;
+                top: 5px;
+                background: url(../img/gallery/b-gallery__header-bubble-right.svg) no-repeat;
+                background-size: cover;
+            }
+        }
     }
 
     &__item {
         margin-bottom: 24px;
     }
 
-    &__img {
-        width: 100%;
+    &__icon_arrow-left {
+        position: absolute;
+        top: 150px;
+        left: -60px;
+    }
+    &__icon_arrow-right {
+        position: absolute;
+        top: 150px;
+        right: -60px;
     }
 }
