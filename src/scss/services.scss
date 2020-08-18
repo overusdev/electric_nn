@@ -7,14 +7,33 @@
     }
 
     &__wrapper {
+        padding-top: 34px;
         display: flex;
         justify-content: center;
     }
 
+    &__content-mobile {
+        display: block;
+        @include desktop {
+            display: none;
+        }   
+    }
+
+    &__content-desktop {
+        display: none;
+        @include desktop {
+            display: block;
+        }   
+    }
+
     &__header {
-        @include t-content-title;
+        font-size: 20px;
+        font-weight: bold;
         color: $black;
         margin-bottom: 48px;
+        @include desktop {
+            font-size: 56px;
+        }
     }
 
     &__item {
@@ -26,13 +45,18 @@
     }
 
     &__icon {
-        width: 75px;
-        height: 75px;
+        width: 41px;
+        height: 41px;        
         margin-bottom: 35px;
+        @include desktop {
+            width: 75px;
+            height: 75px;
+        }
 
         &_flash {
             display: block;
             background: url(../img/services/b-services__icon_flash.svg) no-repeat;
+            background-size: cover;
         }
 
         &_charger {
@@ -67,17 +91,25 @@
     }
 
     &__title {
-        font-weight: bold;
+        font-weight: normal;
+        font-size: 17px;
         font-size: 21px;
         text-align: center;
         margin-bottom: 12px;
         line-height: 28px;
+        @include desktop {
+            font-weight: bold;
+        }
     }
 
     &__description {
+        display: none;
         font-size: 18px;
         text-align: center;
         line-height: 28px;
+        @include desktop {
+            display: block;
+        }
     }
 
 }
