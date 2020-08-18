@@ -3,6 +3,11 @@
     background: linear-gradient(180deg, rgba(255, 0, 0, 0.68) 0%, rgba(247, 133, 0, 0.69) 100%);
     @include transition();
 
+    @include desktop {
+        background: linear-gradient(180deg, rgba(255, 0, 0, 0.68) 0%, rgba(247, 133, 0, 0.69) 100%), url('../img/header/b-header-block__bg.jpg') no-repeat;
+        background-size: cover;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
