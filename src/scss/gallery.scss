@@ -51,6 +51,38 @@
         margin-bottom: 24px;
     }
 
+    &__owl {
+        display: none !important;
+
+        @include tablet {
+            display: block !important;
+        }
+
+        @include desktop {
+            display: block !important;
+        }
+    }
+
+    &__owl-mobile {
+        display: block;
+
+        @include tablet {
+            display: none !important;
+        }
+        @include desktop {
+            display: none !important;
+        }
+    }
+
+    &__owl-mobile-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__mobile-img {
+        width: 50% !important;
+    }
+
     &__icon_arrow-left {
         position: absolute;
         top: 150px;

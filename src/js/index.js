@@ -4,19 +4,19 @@ import 'owl.carousel';
 
 $(function () {
 
-    $('.owl-carousel').owlCarousel({
+    $('.b-gallery__owl').owlCarousel({
         nav: true,
         margin: 40,
         responsiveClass:true,
         responsive:{
             0:{
-                items:1,
-                nav:true
+                items: 1,
+                nav: true
             },
-            // 600:{
-            //     items:3,
-            //     nav:false
-            // },
+            600:{
+                items:3,
+                nav:false
+            },
             1000:{
                 items:3,
                 nav:true,
@@ -27,7 +27,18 @@ $(function () {
             "<img class='b-gallery__icon_arrow-left' src='img/gallery/arrows/b-gallery__icon_arrow-left.svg'>", 
             "<img class='b-gallery__icon_arrow-right' src='img/gallery/arrows/b-gallery__icon_arrow-right.svg'>"
         ],
-    })
+    });
+
+    $('.b-gallery__owl-mobile').owlCarousel({
+        nav: false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items: 1,
+                nav: false
+            }
+        },
+    });
 
     const $popup              = $('.b-popup');
     const $popupBtn           = $('.b-popup__button');
