@@ -180,21 +180,19 @@ $(function () {
     });
 
     $('.b-nav__links').on("click", function (event) {
-        // исключаем стандартную реакцию браузера
         event.preventDefault();
 
         $('.b-nav__menu-wrapper').removeClass('b-nav__menu-wrapper_state_active');
-
-        // получем идентификатор блока из атрибута href
-        var id = $(this).attr('href'),
-
-        // находим высоту, на которой расположен блок
-            top = $(id).offset().top;
-
-        console.log(top);
-
-        // анимируем переход к блоку, время: 800 мс
+        const id = $(this).attr('href');
+        const top = $(id).offset().top;
         $('body,html').animate({ scrollTop: top }, 800);
+    });
+
+    $('.b-header-block__button').on("click", function (event) {
+        event.preventDefault();
+        const orderBlockPosition = $('#b-order').offset().top;
+        $('body,html')
+            .animate({ scrollTop: orderBlockPosition }, 800);
     });
 
     //фикс навбар
