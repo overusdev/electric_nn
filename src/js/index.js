@@ -36,8 +36,34 @@ $(function () {
             0:{
                 items: 1,
                 nav: false
+            },
+        },
+    });
+
+
+    $('.b-reviews__wrapper').owlCarousel({
+        nav: true,
+        margin: 40,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 2,
+                nav: true,
+                loop: false
             }
         },
+        navText: [
+            "<img class='b-reviews__icon_arrow-left' src='img/gallery/arrows/b-gallery__icon_arrow-left.svg'>", 
+            "<img class='b-reviews__icon_arrow-right' src='img/gallery/arrows/b-gallery__icon_arrow-right.svg'>"
+        ],
     });
 
     const $popup              = $('.b-popup');
