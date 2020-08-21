@@ -93,4 +93,12 @@
         top: 230px;
         right: -60px;
     }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include desktop {
+            display: none;
+        }
+    }
 }

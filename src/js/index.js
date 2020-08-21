@@ -188,7 +188,7 @@ $(function () {
         $('body,html').animate({ scrollTop: top }, 800);
     });
 
-    $('.b-header-block__button').on("click", function (event) {
+    $('.b-header-block__button, .order-block').on("click", function (event) {
         event.preventDefault();
         const orderBlockPosition = $('#b-order').offset().top;
         $('body,html')
