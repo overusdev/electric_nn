@@ -112,4 +112,41 @@
         }
     }
 
+    &__wiring-description {
+        font-size: 18px;
+        text-align: center;
+        line-height: 28px;
+        @include desktop {
+            display: block;
+        }
+    }
+
+    &__block {
+        padding: 36px 0;
+    }
+
+    &__block-wiring {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__block-item {
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+    }
+    
+    &__block-wiring-description {
+        min-height: 80px;
+        border-left: 5px solid $color_invert;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 24px;
+    }
+
+    &__block-wiring-description-text {
+        margin-bottom: 8px;
+    }
+
 }
