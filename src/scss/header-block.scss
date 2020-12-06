@@ -34,6 +34,31 @@
         }
     }
 
+    &__list {
+        width: 232px;
+        text-align: left;
+        margin-bottom: 24px;
+
+        @include desktop {
+            width: auto;
+        }
+    }
+
+    &__list-item {
+        position: relative;
+        color: #000;
+        margin-bottom: 8px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: -25px;
+            background: url('../img/header/b-header-block__icon_checked_black.svg') no-repeat;
+        }
+    }
+
     &__title {
         font-size: 30px;
         font-family: Georgia;
@@ -41,6 +66,7 @@
         font-weight: bold;
         @include desktop {
             font-size: 84px;
+            margin-bottom: 32px;
         }
     }
 
