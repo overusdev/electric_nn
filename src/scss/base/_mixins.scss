@@ -75,12 +75,11 @@
 }
 
 @mixin t-content-title {
-    font-size: 14px;
     font-weight: bold;
-    font-style: normal;
-    line-height: 1.88em;
+    font-size: 30px;
+    line-height: 64px;
     @include desktop {
-        font-size: 16px;
+        font-size: 56px;
     }
 }
 

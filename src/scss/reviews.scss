@@ -1,0 +1,100 @@
+.b-reviews {
+    background-color: rgba(26, 40, 63, 0.06);
+    @include transition();
+    padding-bottom: 80px;
+
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__header {
+        position: relative;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 55px;
+        color: $black;
+        margin-bottom: 48px;
+        display: inline-block;
+        @include desktop {
+            font-size: 48px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                left: -75px;
+                top: 5px;
+                background: url(../img/gallery/b-gallery__header-bubble-left.svg) no-repeat;
+                background-size: cover;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                right: -75px;
+                top: 5px;
+                background: url(../img/gallery/b-gallery__header-bubble-right.svg) no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 24px;
+    }
+
+    &__owl {
+        display: none !important;
+
+        @include tablet {
+            display: block !important;
+        }
+
+        @include desktop {
+            display: block !important;
+        }
+    }
+
+    &__owl-mobile {
+        display: block;
+
+        @include tablet {
+            display: none !important;
+        }
+        @include desktop {
+            display: none !important;
+        }
+    }
+
+    &__owl-mobile-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__mobile-img {
+        width: 50% !important;
+    }
+
+    &__icon_arrow-left {
+        position: absolute;
+        top: 230px;
+        left: -60px;
+    }
+    &__icon_arrow-right {
+        position: absolute;
+        top: 230px;
+        right: -60px;
+    }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include desktop {
+            display: none;
+        }
+    }
+}

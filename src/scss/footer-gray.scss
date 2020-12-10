@@ -1,0 +1,72 @@
+.b-footer-gray {
+    background: #CAC4C4;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 478px;
+    }
+
+    &__phone {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 41px;
+        margin-bottom: 13px;
+        color: $black;
+
+        @include desktop {
+            font-size: 64px;
+            line-height: 74px;
+        }
+
+
+        &:hover {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 13px;
+
+        @include desktop {
+            font-size: 30px;
+        }
+    }
+
+    &__links-wrapper {
+        width: 308px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include desktop {
+            width: 368px;
+        }
+    }
+
+    &__icon {
+        width: 56px;
+        height: 56px;
+        &_inst {
+            display: block;
+            background: url(../img/footer/b-footer-gray__icon_inst.png) no-repeat;
+            background-size: cover;
+        }
+        &_vk {
+            display: block;
+            background: url(../img/footer/b-footer-gray__icon_vk.png) no-repeat;
+            background-size: cover;
+        }
+        &_youtube {
+            display: block;
+            background: url(../img/footer/b-footer-gray__icon_youtube.png) no-repeat;
+            background-size: cover;
+        }
+    }
+}

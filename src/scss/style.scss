@@ -1,4 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+// @import "~owl.carousel/dist/assets/owl.carousel.css";
+@import "owl.carousel";
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/reset';
@@ -8,9 +10,10 @@
 @import 'prices';
 @import 'top';
 @import 'popup';
-@import 'benefits';
+@import 'order';
 @import 'gallery';
-@import 'footer';
+@import 'reviews';
+@import 'footer-gray';
 
 .el-sections {
     height: auto;
@@ -19,32 +22,21 @@
     }
 
 }
-// body {
-//   font-family: $font-stack;
-//   // font-family: @font-face;
 
-//   .container {
+.order-block {
+    width: 272px;
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $black;
+    @include desktop {
+        display: none;
+    }
 
-//     padding: 0 24px;
-
-//     @include desktop-1024 {
-//       // width: 1060px;
-//       width: 1170px;
-//       margin-left: auto;
-//       margin-right: auto;
-//     }
-
-//     &_mobile-indents-none {
-//       padding: 0;
-//       @include desktop-1024 {
-//         padding: 0 24px;
-//       }
-//     }
-
-//     &_desktop-indents-none {
-//       @include desktop-1024 {
-//         padding: none;
-//       }
-//     }
-//   }
-// }
+    &__text {
+        font-size: 20px;
+        line-height: 23px;
+        margin-right: 10px;
+    }
+}
